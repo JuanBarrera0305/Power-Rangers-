@@ -2,22 +2,46 @@
 <html>
     <head>
         <title>Power Rangers Pizza Co.</title>
+        <style>
+            body {
+              background: #ffffff;
+            }
+            
+            .content {
+              max-width: 500px;
+              margin: auto;
+              background: white;
+              padding: 10px;
+            }
+            </style>
     </head>
     <script type="text/javascript" src="js/loginCheck.js"></script>
     <body>
         <p>Power Rangers Pizza Co.</p>
         <p>Login Below</p>
 
+        <!-- Login Form Field -->
+        
         <form id  login_field>
         <input type="text" id="username" placeholder="Username">
         <br>
         <input type="text" id="password" placeholder="Password">
         <br>
-        <button id="submit", onclick="loginCheck('username','password')">Press to Login</button>
+        <button id="submit", onclick="loginCheck(document.getElementById('username').value, document.getElementById('password').value)">Press to Login</button>
         </form>
 
+        <!-- Remember me box (not configured yet, but should work when configured with cookies)-->
+        
+        <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+
+        <!-- forgot password link-->
+        <br>
         <a href="forgotpassword.html">Forgot Password?</a>
         <br>
+
+        <!-- Link to guest login -->
 
         <a href="menu.html">Guest Login</a>
 
