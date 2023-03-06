@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Restaurant Menu - Entrees</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* CSS styles for your entrees page */
+	</style>
+</head>
+<body>
+	
+	
+    <section id="option1">
+        <h2>Kobe Beef Steak Pizza 
+          <button class="subtract-btn" data-id="count1">-</button>
+            <span id="count1">0</span>
+            <button class="add-btn" data-id="count1">+</button></h2> 
+            
+            
+        <p>Indulge in the ultimate pizza experience with our Kobe Beef Steak Pizza!</p>
+        <p>We start with a crispy thin crust, then layer on our special tomato sauce,</p>
+        <p>mozzarella cheese, and tender slices of premium Kobe beef steak.</p>
+        <p>Topped with caramelized onions and finished with a drizzle of tangy BBQ sauce,</p>
+        <p>this pizza is bursting with flavor and sure to satisfy your cravings.</p>
+        <p>Don't miss out on this delicious and decadent pizza</p>
+        <p>try our Kobe Beef Steak Pizza today at our pizza restaurant!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+          </section>
+      
+      <section id="option2">
+        <h2> Triple Mille-Feuille Pizza 
+          <button class="subtract-btn" data-id="count1">-</button>
+            <span id="count2">0</span>
+            <button class="add-btn" data-id="count1">+</button></h2> 
+            
+            
+        <p>Experience the perfect balance of crispy and creamy with our Triple Mille-Feuille Pizza!</p>
+        <p>This pizza features a thin and crispy crust topped with three layers of creamy</p>
+        <p>and savory ingredients - pesto, ricotta cheese, and mozzarella cheese.</p>
+        <p>Finished with a sprinkle of fragrant basil and a drizzle of olive oil,</p>
+        <p>this pizza is the ultimate indulgence. Don't miss out on this unique and delicious pizza</p>
+        <p>try our Triple Mille-Feuille Pizza today at our pizza restaurant!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+          </section>
+      
+      <section id="option3">
+        <h2>Red Ranger's Pizza 
+          <button class="subtract-btn" data-id="count1">-</button>
+          <span id="count3">0</span>
+          <button class="add-btn" data-id="count1">+</button></h2> 
+          
+          
+          <p>Get ready to power up with our Red Ranger's Pizza!</p>
+          <p>This pizza features a spicy kick, with a zesty tomato sauce, gooey mozzarella cheese</p>
+          <p>and flavorful pepperoni, jalapeno peppers, and red onions. </p>
+          <p>Topped off with a sprinkle of crushed red pepper flakes, this pizza is perfect for those who crave a little heat in every bite.</p>
+          <p>Don't miss out on this bold and flavorful pizza</p>
+          <p>try our Red Ranger's Pizza today at our pizza restaurant!</p>
+      <style>
+    p {
+      margin: 0;
+    }
+    </style>
+        </section>
+      
+      <section id="option4">
+        <h2>Dino's Bellissima Pizza 
+          <button class="subtract-btn" data-id="count1">-</button>
+            <span id="count4">0</span>
+            <button class="add-btn" data-id="count1">+</button></h2> 
+            
+            
+            <p>Transport yourself to Italy with our Dino's Bellissima Pizza!</p>
+            <p>This pizza features a classic thin crust, topped with a mouthwatering </p>
+            <p>combination of fresh mozzarella cheese, fragrant basil, and juicy cherry tomatoes.</p>
+            <p>Finished with a drizzle of extra virgin olive oil and a sprinkle of Parmesan cheese,</p>
+            <p>this pizza is simple yet delicious.</p>
+            <p>Don't miss out on this traditional and authentic Italian favorite</p>
+            <p>try our Dino's Bellissima Pizza today at our pizza restaurant!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+          </section>
+      
+      <section id="option5">
+        <h2> Pizza Royale 007 
+          <button class="subtract-btn" data-id="count1">-</button>
+          <span id="count5">0</span>
+          <button class="add-btn" data-id="count1">+</button></h2> 
+          
+          
+          <p>Experience the ultimate pizza sophistication with our Pizza Royale 007!</p>
+          <p>This pizza features a luxurious truffle cream sauce, layered with a blend of</p>
+          <p>flavorful smoked gouda and mozzarella cheeses.</p>
+          <p>Topped with succulent pieces of grilled chicken and sautéed mushrooms,</p>
+          <p>this pizza is fit for a secret agent.</p>
+          <p> Don't miss out on this decadent and indulgent pizza</p>
+          <p>try our Pizza Royale 007 today at our pizza restaurant!</p>
+
+      <style>
+    p {
+      margin: 0;
+    }
+    </style>
+        </section>
+      
+      <script>
+        const counters = document.querySelectorAll('span[id^="count"]');
+        counters.forEach((counter) => {
+          const id = counter.getAttribute('id');
+          const section = document.querySelector(`#${id.replace('count', 'option')}`);
+          const addBtn = section.querySelector('.add-btn');
+          const subtractBtn = section.querySelector('.subtract-btn');
+          
+          addBtn.addEventListener('click', () => {
+            const count = parseInt(counter.textContent) + 1;
+            counter.textContent = count;
+          });
+          
+          subtractBtn.addEventListener('click', () => {
+            const count = parseInt(counter.textContent) - 1;
+            counter.textContent = count >= 0 ? count : 0;
+          });
+        });
+      </script>
+	
+	<footer>
+		<p>&copy; 2023 Restaurant Name</p>
+	</footer>
+</body>
+</html>
