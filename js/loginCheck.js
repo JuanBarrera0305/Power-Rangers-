@@ -5,7 +5,7 @@ function loginCheck(username,password) {
     for (let i = 0; i < usernames.length;i++) {
         if (username === usernames[i]) {
             if (password === passwords[i]) {
-                window.location.href = "ccpulfo.it.pointpark.edu/menu.html";
+                window.location.href = "menu_Folder/HomeMenu.html";
             } else if (i > usernames.length) 
                 alert("Incorrect Password");
         } else { 
@@ -13,6 +13,7 @@ function loginCheck(username,password) {
         }
     }
 }
+
 
 // make sure usernames array is the same size as passwords array
 

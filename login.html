@@ -2,26 +2,47 @@
 <html>
     <head>
         <title>Power Rangers Pizza Co.</title>
+        <!-- CSS styling elements to make our webpage very pretty ;) -->
         <style>
             body {
               background: #ffffff;
             }
             
             .content {
+              text-align: center;
               max-width: 500px;
               margin: auto;
               background: white;
-              padding: 10px;
+              padding: 1px;
+              font-size: 150%;
             }
+
+            h1 {
+              border: 3px solid rgb(13, 173, 13);
+              font-size: 300%;
+              text-align: center;
+            }
+
+            .right {
+              text-align: right;
+            }
+            
+            .left {
+              text-align: left;
+            }
+
             </style>
     </head>
     <script type="text/javascript" src="js/loginCheck.js"></script>
     <body>
-        <p>Power Rangers Pizza Co.</p>
+
+        <h1>Power Rangers Pizza Co.</h1>
+
+        <div class="content">
         <p>Login Below</p>
 
         <!-- Login Form Field -->
-        
+
         <form id  login_field>
         <input type="text" id="username" placeholder="Username">
         <br>
@@ -33,7 +54,7 @@
         <!-- Remember me box (not configured yet, but should work when configured with cookies)-->
         
         <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <input type="checkbox" name="remember"> Remember me
         </label>
 
         <!-- forgot password link-->
@@ -45,6 +66,10 @@
         <!-- Link to guest login -->
 
         <a href="menu_Folder/HomeMenu.html">Guest Login</a>
+        <div class="right">
+        <img src="images/pizza1.jpg" height="300px", width="300px">
+        </div>
 
+      </div>
     </body>
 </html>
