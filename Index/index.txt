@@ -1,0 +1,3 @@
+index should just be a main menu of sorts to navigate to mostly relevant parts of the page
+
+index should be able to navigate to menu, login and other parts, but peices like "forgot password" is better reachable on another page
