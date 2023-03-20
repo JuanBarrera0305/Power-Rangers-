@@ -60,6 +60,24 @@ function completePayment() {
         number.focus();
     }
     //Expiration
+    for (var i = 0; i < 2; i++) {
+        var expMonChar = parseInt(expMon[i]);
+        if (isNaN(expMonChar)) {
+            alert("Expiration month cannot contain letters.");
+            var checkVal = false;
+            return false;
+            expMon.focus();
+        }
+    }
+    for (var i = 0; i < 4; i++) {
+        var expYearChar = parseInt(expYear[i]);
+        if (isNaN(expYearChar)) {
+            alert("Expiration year cannot contain letters.");
+            var checkVal = false;
+            return false;
+            expYear.focus();
+        }
+    }
     if (expMon.length <= 1 || expYear.length <= 3) {
         alert("Expiration date is not in the proper format.");
         var checkVal = false;
