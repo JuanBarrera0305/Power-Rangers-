@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Power Rangers Grocery Shop</title>
+    <style>
+      /* Center the title */
+      h1 {
+        text-align: center;
+      }
+    </style>
+
+  <title>Order Method</title>
+  <script src="./grocery_shop.js">
+    //placeholder (js)
+  </script>
+</head>
+<body onload="startup();">
+  <h1>Order Method</h1>
+  <br>
+    <input type="button" id="deliverySelect" value="Delivery" onclick="delivery();">
+    <br></br>
+    <input type="button" id="pickupSelect" value="Pickup" onclick="pickup();">
+    <br><br><br>
+
+
+  <div id="deliveryItems">
+        <h2>Delivery Items</h2>
+        <label for="item1">Pepperoni - $1.99</label>
+        <input type="checkbox" id="item1"><br>
+        <label for="item2">Sausage - $1.99</label>
+        <input type="checkbox" id="item2"><br>
+        <label for="item3">Mushroom - $0.99</label>
+        <input type="checkbox" id="item3"><br>
+        <label for="item4">Green Peppers - $0.99</label>
+        <input type="checkbox" id="item4"><br>
+        <label for="item5">Black Olives - $0.99</label>
+        <input type="checkbox" id="item5"><br>
+        <label for="item6">Mozzarella - $1.99</label>
+        <input type="checkbox" id="item6"><br>
+        <label for="item7">Red Onions - $0.99</label>
+        <input type="checkbox" id="item7"><br>
+        <label for="item8">Ham - $1.99</label>
+        <input type="checkbox" id="item8"><br>
+        <label for="item9">Pineapple - $0.99</label>
+        <input type="checkbox" id="item9"><br>
+        <label for="item10">Bacon - $1.99</label>
+        <input type="checkbox" id="item10"><br>
+        <label for="item11">Tomatoes - $0.99</label>
+        <input type="checkbox" id="item11"><br>
+        <label for="item12">Banana Peppers - $0.99</label>
+        <input type="checkbox" id="item12"><br>
+        <br><br>
+        <input type="button" id="pickupSubmit" onclick="deliverySubmit();" onclick="var method = 'delivery';" value="Place order!">
+  </div>
+
+  <div id="pickupItems">
+        <h2>Pickup Items</h2>
+        <label for="item1">Pepperoni - $1.99</label>
+        <input type="checkbox" id="item1"><br>
+        <label for="item2">Sausage - $1.99</label>
+        <input type="checkbox" id="item2"><br>
+        <label for="item3">Mushroom - $0.99</label>
+        <input type="checkbox" id="item3"><br>
+        <label for="item4">Green Peppers - $0.99</label>
+        <input type="checkbox" id="item4"><br>
+        <label for="item5">Black Olives - $0.99</label>
+        <input type="checkbox" id="item5"><br>
+        <label for="item6">Mozzarella - $1.99</label>
+        <input type="checkbox" id="item6"><br>
+        <label for="item7">Red Onions - $0.99</label>
+        <input type="checkbox" id="item7"><br>
+        <label for="item8">Ham - $1.99</label>
+        <input type="checkbox" id="item8"><br>
+        <label for="item9">Pineapple - $0.99</label>
+        <input type="checkbox" id="item9"><br>
+        <label for="item10">Bacon - $1.99</label>
+        <input type="checkbox" id="item10"><br>
+        <label for="item11">Tomatoes - $0.99</label>
+        <input type="checkbox" id="item11"><br>
+        <label for="item12">Banana Peppers - $0.99</label>
+        <input type="checkbox" id="item12"><br>
+        <label for="item13">Anchovies - $1.99</label>
+        <input type="checkbox" id="item13"><br>
+        <label for="item14">Steak - $2.99</label>
+        <input type="checkbox" id="item14"><br>
+        <label for="item15">Chicken - $2.99</label>
+        <input type="checkbox" id="item15"><br>
+        <label for="item16">Cheddar - $1.99</label>
+        <input type="checkbox" id="item16"><br>
+        <br><br>
+        <input type="button" id="pickupSubmit" onclick="pickupSubmit();" value="Place order!">
+  </div>
+
+  <div id="summary">
+    <h2>Order Summary</h2>
+    <script>document.write("Order Type: " + method)</script><br><br>
+
+    <h3>Selected Items</h3>
+
+    <h4>Order Total</h4>
+    <input type="button" id="deliveryTotal" value="Get Delivery Total" onclick="deliveryCalc();">
+    <input type="button" id="pickupTotal" value="Get Pickup Total" onclick="pickupCalc();">
+
+    <br><br><br>
+    <input type="button" id="orderReady" value="When will my order be ready?" onclick="timeCalc();">
+  </div>
+
+</body>
+</html>
