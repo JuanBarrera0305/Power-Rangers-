@@ -29,8 +29,6 @@ The Following is the Home Page
 The Following is The Authentication Screen.
 
 
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -74,6 +72,10 @@ The Following is The Authentication Screen.
         }
 
         // Save to local storage
+
+        if (!firstName || !lastName || !address1 || !city || !state || !zipCode.match(/^\d{5}$/) || !username || !password) {
+    return;
+  }
         localStorage.setItem(
           "user",
           JSON.stringify({
@@ -93,21 +95,21 @@ The Following is The Authentication Screen.
       } 
 
       function authenticateUser() {
-        const storedUser = JSON.parse(localStorage.getItem("user"));
-        const username = document.getElementById("authUsername").value;
-        const password = document.getElementById("authPassword").value;
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+  const username = document.getElementById("authUsername").value;
+  const password = document.getElementById("authPassword").value;
 
-        if (!storedUser || storedUser.username !== username || storedUser.password !== password) {
-          alert("Invalid username or password");
-          return;
-        }
+  if (!storedUser || storedUser.username !== username || storedUser.password !== password) {
+    alert("Invalid username or password");
+    return;
+  }
 
-        alert("Authentication successful");
-      }
-    </script>
+  alert("Authentication successful");
+}
+    </script>-
   </head>
   <body>
-    <h1>User Account Creation</h1>
+    <h1>User Account Creation Newest </h1>
     <form>
       <label for="firstName">First Name:</label>
       <input type="text" id="firstName" name="firstName" required />
@@ -134,11 +136,10 @@ The Following is The Authentication Screen.
       <input type="text" id="username" name="username" required />
 
       <label for="password">Password:</label>
-      <input type="password" id="password name= "password required />
+      <input type="password" id="password" name="password" />
       <button type="button" onclick="saveUser()">Create Account</button>
 </form>
 
-<hr />
 
 <h2>User Authentication</h2>
 <form>
@@ -152,3 +153,4 @@ The Following is The Authentication Screen.
 </form>
   </body>
 </html>
+
