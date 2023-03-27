@@ -106,7 +106,7 @@ The Following is The Authentication Screen.
 
   alert("Authentication successful");
 }
-    </script>-
+    </script>
   </head>
   <body>
     <h1>User Account Creation Newest </h1>
@@ -153,4 +153,3 @@ The Following is The Authentication Screen.
 </form>
   </body>
 </html>
-
