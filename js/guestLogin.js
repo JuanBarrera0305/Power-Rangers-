@@ -9,5 +9,9 @@ var guestUser
 
 function guestLogin() {
     guestUser = prompt("What is your name?","Enter Your Name");
-    window.location.href="menu_folder/HomeMenu.html";
+    if (guestUser.value === "") {
+        alert("Please Enter a name!");
+    } else {
+        window.location.href = "/menu_Folder/HomeMenu.html"
+    }
 }

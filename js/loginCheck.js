@@ -29,6 +29,5 @@ function checkpassword(username,password) {
 
 // make sure usernames array is the same size as passwords array
 
-var usernames=["craig","username","samuel","juan","user","hackerman"]
 
 var passwords=["pulford","password","fehl","barrera","name","hackers"]
