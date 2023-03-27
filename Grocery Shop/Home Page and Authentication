@@ -1,0 +1,154 @@
+The Following is the Home Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Power Rangers Grocery Shop</title>
+    <style>
+      /* Center the title */
+      h1 {
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Power Rangers Grocery Shop</h1>
+    <p>Thank you for visiting our grocery shop. We have a wide selection of fresh produce, meats, dairy products, and much more. Our staff is here to help you find everything you need for your next meal.</p>
+    <p>Please browse our website to learn more about our products and services.</p>
+    <button onclick="location.href='AuthenticationScreen.html'">Create My Account</button>
+    <style>
+        /* Center the text */
+        p {
+          text-align: center;
+        }
+
+</body>
+</html>
+
+
+The Following is The Authentication Screen.
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Account Creation</title>
+    <script>
+      function saveUser() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const address1 = document.getElementById("address1").value;
+        const address2 = document.getElementById("address2").value;
+        const city = document.getElementById("city").value;
+        const state = document.getElementById("state").value;
+        const zipCode = document.getElementById("zipCode").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Validation
+        if (!firstName) {
+          console.error("First name is required");
+        }
+        if (!lastName) {
+          console.error("Last name is required");
+        }
+        if (!address1) {
+          console.error("Address 1 is required");
+        }
+        if (!city) {
+          console.error("City is required");
+        }
+        if (!state) {
+          console.error("State is required");
+        }
+        if (!zipCode.match(/^\d{5}$/)) {
+          console.error("Zip code must be 5 digits");
+        }
+        if (!username) {
+          console.error("Username is required");
+        }
+        if (!password) {
+          console.error("Password is required");
+        }
+
+        // Save to local storage
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            firstName,
+            lastName,
+            address1,
+            address2,
+            city,
+            state,
+            zipCode,
+            username,
+            password,
+          })
+        );
+
+        alert("User created successfully");
+      } 
+
+      function authenticateUser() {
+        const storedUser = JSON.parse(localStorage.getItem("user"));
+        const username = document.getElementById("authUsername").value;
+        const password = document.getElementById("authPassword").value;
+
+        if (!storedUser || storedUser.username !== username || storedUser.password !== password) {
+          alert("Invalid username or password");
+          return;
+        }
+
+        alert("Authentication successful");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>User Account Creation</h1>
+    <form>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required />
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required />
+
+      <label for="address1">Address 1:</label>
+      <input type="text" id="address1" name="address1" required />
+
+      <label for="address2">Address 2:</label>
+      <input type="text" id="address2" name="address2" />
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required />
+
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required />
+
+      <label for="zipCode">Zip Code:</label>
+      <input type="text" id="zipCode" name="zipCode" required />
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password name= "password required />
+      <button type="button" onclick="saveUser()">Create Account</button>
+</form>
+
+<hr />
+
+<h2>User Authentication</h2>
+<form>
+  <label for="authUsername">Username:</label>
+  <input type="text" id="authUsername" name="authUsername" required />
+
+  <label for="authPassword">Password:</label>
+  <input type="password" id="authPassword" name="authPassword" required />
+
+  <button type="button" onclick="authenticateUser()">Authenticate</button>
+</form>
+  </body>
+</html>
