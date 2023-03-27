@@ -7,6 +7,11 @@
             body {
               background: #f6e8e8;
             }
+
+            li p {
+            margin: 0;
+            padding: 0;
+            }
             
             .content {
               text-align: center;
@@ -44,12 +49,12 @@
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 10px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
+            margin: auto;
             cursor: pointer;
             }
 
@@ -81,32 +86,37 @@
         <div class="content">
 
         <!-- Login Form Field -->
+        <fieldset>
+        <form id=login_field>
 
-        <form id  login_field>
+        <p>Enter Username and Password</p>
+
         <input type="text" id="username" placeholder="Username">
         <br>
+
         <input type="password" id="password" placeholder="Password">
         <br>
+
+      <!-- Remember me box (not configured yet, but should work when configured with cookies)-->
         <label>
         <input type="checkbox" name="remember"> Remember me
         </label>
         <br>
-        <button id="submit", onclick="usernameCheck(document.getElementById('username').value,document.getElementById('password').value)" class="buttonLogin">Press to Login</button>
-        </form>
-
-        <!-- Remember me box (not configured yet, but should work when configured with cookies)-->
         
+        <button id="submit", onclick="usernameCheck(document.getElementById('username').value,document.getElementById('password').value)" class="buttonLogin">Press to Login</button>
+        </form>   
 
         <!-- forgot password link-->
         
         <a href="login_folder/forgotpassword.html">Forgot Password?</a>
         <br>
 
+      </fieldset>
+
         <!-- Link to guest login -->
-        
-        <button class="button" onclick="guestLogin()">Login as Guest</button>
-        OR
-        <button class="button">Create New Account</button>
+        <label for="createNew">Don't have an account?</label>
+        <br>
+        <button class="button" id="createNew"  onclick="window.location = '/login_folder/createaccount.html'">Create New Account</button> or <button class="button" onclick="guestLogin()" id="guestButton">Login as Guest</button>
 
       </div>
     </body>

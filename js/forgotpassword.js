@@ -33,3 +33,7 @@ function validateForgotPassword() {
 function forgotpassword(email, password, passwordConfirm) {
     document.getElementById("email")
 }
+
+function createAccount(username, email, password, passwordConfirm) {
+
+}
