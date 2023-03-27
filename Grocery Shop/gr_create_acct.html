@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Power Rangers Grocery Shop</title>
+    <style>
+      /* Center the title */
+      h1 {
+        text-align: center;
+      }
+    </style>
+
+The Following is The Authentication Screen.
+  <title>User Account Creation</title>
+  <script src="./grocery_shop.js">
+    //placeholder (js)
+  </script>
+</head>
+<body>
+  <h1>User Account Creation Newest </h1>
+  <form>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required />
+    <br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required />
+    <br>
+
+    <label for="address1">Address 1:</label>
+    <input type="text" id="address1" name="address1" required />
+    <br>
+
+    <label for="address2">Address 2:</label>
+    <input type="text" id="address2" name="address2" />
+    <br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required />
+    <br>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required />
+    <br>
+
+    <label for="zipCode">Zip Code:</label>
+    <input type="text" id="zipCode" name="zipCode" required />
+    <br>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" />
+    <button type="button" onclick="saveUser()">Create Account</button>
+</form>
+
+
+<h2>User Authentication</h2>
+<form>
+<label for="authUsername">Username:</label>
+<input type="text" id="authUsername" name="authUsername" required />
+
+<label for="authPassword">Password:</label>
+<input type="password" id="authPassword" name="authPassword" required />
+
+<button type="button" onclick="authenticateUser()">Authenticate</button>
+</form>
+</body>
+</html>
