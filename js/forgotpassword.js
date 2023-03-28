@@ -13,7 +13,7 @@ function userInfo(username, password, email) {
 
 var craig = new userInfo("craig", "pulford", "ccpulfo@pointpark.edu");
 var samuel = new userInfo("samuel", "fehl", "ccpulfo@pointpark.edu");
-var juan = new userInfo("juan", "barea", "ccpulfo@pointpark.edu");
+var juan = new userInfo("juan", "barrera", "ccpulfo@pointpark.edu");
 var user = new userInfo("craig", "pulford", "ccpulfo@pointpark.edu");
 var hackerman = new userInfo("craig", "pulford", "ccpulfo@pointpark.edu");
 var jeff = new userInfo("jeff", "seaman","jseaman@pointpark.edu");
