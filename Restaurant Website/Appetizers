@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appetizers</title>
+  <style>
+    body {
+      background-color: rgb(216, 255, 216);
+    }
+  </style>
+	</head>
+  <body>
+    <header>
+      <h1>Appetizers</h1>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, Helvetica, sans-serif;
+      }
+     header {
+          background-color: #e27b43;
+          padding: 20px;
+          text-align: center;
+          color:#f6ef21;
+     }
+      h1 {
+          font-size: 48px;
+          margin: 0;
+          
+      }
+      </style>
+    </header>
+
+    <nav>
+      <ul>
+        <div class="nav-wrapper">
+          <li><a href="MainHomeMenu.html">Return To Home</a></li>
+        </div>
+      </ul>
+    </nav>
+	
+    <style>
+       nav {
+			  background-color: #6aad49;
+			  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			  margin-bottom: 20px;
+        border: 1px solid #f6ef21;
+			}
+      .nav-wrapper {
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			}
+      li {
+			  list-style: none;
+			  margin-right: 20px;
+			}
+      a {
+			  text-decoration: none;
+			  color: #f6ef21;
+			  font-weight: bold;
+			  padding: 10px;
+			  transition: all 0.3s ease;
+			}
+      a:hover {
+			  color: #e27b43;
+			}
+      a.active {
+			  color: #e27b43;
+			  border-bottom: 2px solid #e27b43;
+			}
+      .add-btn, .sub-btn {
+			display: inline-block;
+			background-color: #f6ef21;
+			color: #000;
+			border: none;
+			padding: 5px 10px;
+			font-weight: bold;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-left: 10px;
+		}
+		.add-btn:hover, .sub-btn:hover {
+			background-color: #e27b43;
+			color: #fff;
+		}
+    .my-span {
+    display: inline-block;
+    background-color: #f6ef21;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+		.count {
+			display: inline-block;
+			font-size: 24px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+    section {
+			padding: 20px;
+			background-color: #81d596;
+			margin-bottom: 20px;
+    }
+    .price {
+  background-color: #e27b43;
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 15px;
+  clip-path: circle(50% at 50% 50%);
+}
+p {
+	margin: 0;
+  font-weight: normal;
+
+	}
+    
+
+         
+    </style>
+    </header>
+	
+    <section id="option1">
+        <h2>Italian Dip 
+            <span class="price">$7.99</span>
+            <button onclick="decrement('item1')" class="sub-btn">-</button> 
+          <span id="item1" class="span-btn">0</span>
+          <button onclick="increment('item1')" class="add-btn">+</button> 
+            
+            
+        <p>A creamy and savory blend of melted mozzarella, parmesan, and cream cheese</p>
+        <p>mixed with Italian seasonings, served hot with crispy garlic bread for dipping.</p>
+        <p>The perfect starter for your pizza feast!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+          </section>
+    
+        
+      
+      <section id="option2">
+        <h2>Jumbo Wings 
+            <span class="price">$5.99</span>
+            <button onclick="decrement('item2')" class="sub-btn">-</button> 
+          <span id="item2" class="span-btn">0</span>
+          <button onclick="increment('item2')" class="add-btn">+</button> 
+            
+            
+            
+        <p>Enjoy our delicious Jumbo Wings! These large and meaty chicken wings are coated in your choice of sauce </p>
+        <p>from classic buffalo to honey BBQ and cooked to crispy perfection.</p>
+        <p>Served with your choice of dipping sauce and celery sticks, these wings are the perfect start </p>
+        <p>to any meal or a great snack to share with friends while watching the game.</p>
+        <p>Don't miss out on the ultimate wing experience at our pizza restaurant!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+    </section>
+      
+      <section id="option3">
+        <h2>Bruschetta 
+            <span class="price">$8.99</span>
+            <button onclick="decrement('item3')" class="sub-btn">-</button> 
+          <span id="item3" class="span-btn">0</span>
+          <button onclick="increment('item3')" class="add-btn">+</button> 
+            
+            
+        <p>Savor the flavors of Italy with our delicious Bruschetta appetizer!</p>
+        <p>Freshly toasted slices of bread are topped with a mouthwatering blend of</p>
+        <p>juicy, ripe tomatoes, fragrant basil, and garlic, all drizzled with extra virgin olive oil.</p>
+        <p>This classic dish is the perfect way to start your meal or to share with friends while enjoying our tasty pizzas.</p>
+        <p>Don't miss out on this traditional Italian favorite - try our Bruschetta today at our pizza restaurant!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+    </section>
+      
+      <section id="option4">
+        <h2>Onion Rings 
+            <span class="price">$3.99</span>
+            <button onclick="decrement('item4')" class="sub-btn">-</button> 
+          <span id="item4" class="span-btn">0</span>
+          <button onclick="increment('item4')" class="add-btn">+</button> 
+            
+            
+        <p>Crunch into our crispy Onion Rings and experience the perfect blend of savory and sweet! </p>
+        <p>These golden-brown rings are made from thick slices of</p>
+        <p>sweet onion, lightly coated in seasoned batter, and fried to perfection.</p>
+        <p>Served with your choice of dipping sauce, our Onion Rings make the perfect addition to any meal</p>
+        <p>or a delicious snack to share with friends. </p>
+        <p>Don't miss out on this classic appetizer</p>
+        <p>try our Onion Rings today at our pizza restaurant!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+    </section>
+      
+      <section id="option5">
+        <h2>French Fries 
+            <span class="price">$2.99</span>
+            <button onclick="decrement('item5')" class="sub-btn">-</button> 
+          <span id="item5" class="span-btn">0</span>
+          <button onclick="increment('item5')" class="add-btn">+</button> 
+            
+            
+        <p>Indulge in the crispy goodness of our French Fries!</p>
+        <p> Cut from premium potatoes, our fries are fried to a perfect golden brown </p>
+        <p>and seasoned with just the right amount of salt.</p>
+        <p>Served with your choice of dipping sauce, our French Fries are the perfect accompaniment </p>
+        <p>to any meal or a delicious snack to share with friends.</p>
+        <p>Don't miss out on this classic appetizer - try our French Fries today at our pizza restaurant!</p>
+        <style>
+			p {
+			  margin: 0;
+			}
+		  </style>
+    </section>
+      
+    <script>
+      function increment(itemId) {
+      var item = document.getElementById(itemId);
+      var count = parseInt(item.textContent);
+      item.textContent = count + 1;
+      updateTotal();
+      }
+            
+      function decrement(itemId) {
+      var item = document.getElementById(itemId);
+      var count = parseInt(item.textContent);
+      if (count > 0) {
+      item.textContent = count - 1;
+      updateTotal();
+      }
+      }
+            
+      function updateTotal() {
+      var item1Count = parseInt(document.getElementById("item1").textContent);
+      var item2Count = parseInt(document.getElementById("item2").textContent);
+      var item3Count = parseInt(document.getElementById("item3").textContent);
+      var item4Count = parseInt(document.getElementById("item4").textContent);
+      var item5Count = parseInt(document.getElementById("item5").textContent);
+      var total = item1Count * 7.99 + item2Count * 5.99 + item3Count * 8.99 + item4Count * 3.99 + item5Count * 2.99;
+      document.getElementById("total").textContent = total.toFixed(2);
+      }
+      </script>
+      
+      <h2>Total: $<span id="total">0.00</span></h2>
+
+      <footer style="background-color: #bf7d12; padding: 10px;">
+        <p style="text-align: center; color: rgb(233, 219, 26); font-size: 16px; font-weight: bold;">&copy; 2023 Power Rangers Pizza Co.</p>
+        </footer>
+</body>
+</html>
