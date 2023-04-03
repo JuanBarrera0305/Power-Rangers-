@@ -108,7 +108,7 @@
 
         <!-- forgot password link-->
         
-        <a href="login_folder/forgotpassword.html">Forgot Password?</a>
+        <a href="login/forgotpassword.html">Forgot Password?</a>
         <br>
 
       </fieldset>
@@ -116,7 +116,7 @@
         <!-- Link to guest login -->
         <label for="createNew">Don't have an account?</label>
         <br>
-        <button class="button" id="createNew"  onclick="window.location = '/login_folder/createaccount.html'">Create New Account</button> or <button class="button" onclick="guestLogin()" id="guestButton">Login as Guest</button>
+        <button class="button" id="createNew"  onclick="window.location = '/login/createaccount.html'">Create New Account</button> or <button class="button" onclick="guestLogin()" id="guestButton">Login as Guest</button>
 
       </div>
     </body>
