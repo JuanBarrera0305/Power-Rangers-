@@ -19,7 +19,7 @@ function usernameCheck (username,password) {
 function checkpassword(username,password) {
     var checkNum = usernames.indexOf(username);
     if (passwords[checkNum] === password)
-        window.location.href = "menu_Folder/HomeMenu.html";
+        window.location.href = "menu/HomeMenu.html";
     else {
         alert("Incorrect Password")
     }
