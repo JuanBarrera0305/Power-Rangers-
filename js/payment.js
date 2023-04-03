@@ -10,9 +10,7 @@ function cash() {
 function card() {
     alert("Card Payment Selected, Pay Online");
     var currentSite = window.location.hostname;
-    var destination = "http://" + currentSite + ":5500/payment/card.html";
-    window.location.href = destination;
-    //window.location.href = "http://127.0.0.1:5500/html/card.html"
+    window.location.href = http://ccpulfo.it.pointpark.edu/payment/card.html;
     var paymentMethod = false;
 }
 
