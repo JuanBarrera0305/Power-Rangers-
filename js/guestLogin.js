@@ -12,6 +12,6 @@ function guestLogin() {
     if (guestUser.value === "") {
         alert("Please Enter a name!");
     } else {
-        window.location.href = "/menu/HomeMenu.html"
+        window.location.href = "/menu/MainHomeMenu.html"
     }
 }
