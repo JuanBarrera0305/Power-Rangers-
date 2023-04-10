@@ -1,10 +1,3 @@
-// forgot password function
-
-
-// add event listeners they are cool
-
-
-
 function userInfo(username, password, email) {
     this.Username = username,
     this.Password = password,
@@ -34,6 +27,31 @@ function forgotpassword(email, password, passwordConfirm) {
     document.getElementById("email")
 }
 
-function createAccount(username, email, password, passwordConfirm) {
+function createAccount() {
+    var email = document.getElementById("email").value;
+    var emailConfirm = document.getElementById("confirmemail").value;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var passwordConfirm = document.getElementById("confirmpassword").value;
+    if (username === "" || email === "" || password === "" || passwordConfirm === "" || emailConfirm === "") {
+        console.log("failed to fill in fields")
+         return alert("not all forms were filled out!");
+    }
+    if(email != emailConfirm) {
+        console.log("emails do not match")
+        return alert("emails must be the same");
+    }
+    if(password != passwordConfirm) {
+        console.log("passwords do not match");
+        return alert("two different passwords entered in password fields");
+    } 
+    if (password.length > 8) {
+        console.log("account successfully created");
+        var newUserCreated = new userInfo(username, password, email);
+        console.log(newUserCreated);
+        window.location.href = "/menu/MainHomeMenu.html";
+        return;
+    }
+
 
 }

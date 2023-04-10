@@ -1,15 +1,83 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Forgot Password?</title>
+        <style>
+            body {
+              background: #f6e8e8;
+            }
+
+            li p {
+            margin: 0;
+            padding: 0;
+            }
+            
+            .content {
+              text-align: center;
+              max-width: 500px;
+              margin: auto;
+              background: #f6e8e8;
+              padding: 1px;
+              font-size: 150%;
+            }
+
+            h1 {
+              border: 3px solid #4CAF50;
+              background:#4CAF50;
+              font-size: 300%;
+              text-align: center;
+              color: white;
+              padding: 20px 100px;
+              max-width: 1080;
+            }
+
+            h2 {
+              text-align: center;
+            }
+
+
+            .right {
+              text-align: right;
+            }
+            
+            .left {
+              text-align: left;
+            }
+
+            .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: auto;
+            cursor: pointer;
+            }
+
+            .buttonLogin {
+            background-color: #bc1919;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+        </style>
+
     </head>
     <script src="/js/forgotpassword.js"></script>
     <body>
         <h1>Create New Account</h1>
 
         <br>
-
-        <form onsubmit="/menu/MainHomeMenu.html">
+<div class="content">
+        <form onsubmit="createAccount();window.location='menu/MainHomeMenu.html'" id="signup" name="signup">
 
             <!--Email-->
             <label for="email">Email</label>
@@ -19,7 +87,7 @@
             <!--Confirm Email-->
             
             <label for="emailconfirm">Confirm Email Entry</label>
-            <input type="email" id="emailconfirm" name="confirmemail">
+            <input type="email" id="confirmemail" name="confirmemail">
             <br>
 
             <!--Username-->
@@ -39,6 +107,11 @@
             <label for="confirmpassword">Confirm Password</label>
             <input type="password" id="confirmpassword" name="confirmpassword">
 
+            <br>
+
+            <input type="submit" Name="Submit" >
+
+        </div>
         </form>
     </body>
 </html>
