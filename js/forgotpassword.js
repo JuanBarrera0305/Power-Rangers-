@@ -33,6 +33,7 @@ function createAccount() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var passwordConfirm = document.getElementById("confirmpassword").value;
+    
     if (username === "" || email === "" || password === "" || passwordConfirm === "" || emailConfirm === "") {
         console.log("failed to fill in fields")
          return alert("not all forms were filled out!");
@@ -41,17 +42,10 @@ function createAccount() {
         console.log("emails do not match")
         return alert("emails must be the same");
     }
-    if(password != passwordConfirm) {
-        console.log("passwords do not match");
-        return alert("two different passwords entered in password fields");
-    } 
-    if (password.length > 8) {
-        console.log("account successfully created");
-        var newUserCreated = new userInfo(username, password, email);
-        console.log(newUserCreated);
-        window.location.href = "/menu/MainHomeMenu.html";
-        return;
+    if (password != passwordConfirm) {
+        console.log("passwords are not matching")
+        return alert("passwords do not match")
+    } else {
+        return window.location.replace("menu/MainHomeMenu.html")
     }
-
-
 }

@@ -77,39 +77,39 @@
 
         <br>
 <div class="content">
-        <form onsubmit="createAccount();window.location='menu/MainHomeMenu.html'" id="signup" name="signup">
+        <form id="signup" name="signup" action="/menu/MainHomeMenu.html" method="post">
 
             <!--Email-->
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
             <br>
 
             <!--Confirm Email-->
             
             <label for="emailconfirm">Confirm Email Entry</label>
-            <input type="email" id="confirmemail" name="confirmemail">
+            <input type="email" id="confirmemail" name="confirmemail" required>
             <br>
 
             <!--Username-->
 
             <label for="username">Username</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" required>
             <br>
 
             <!--Password-->
 
             <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" required>
             <br>
 
             <!--Confirm Password-->
 
             <label for="confirmpassword">Confirm Password</label>
-            <input type="password" id="confirmpassword" name="confirmpassword">
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
 
             <br>
 
-            <input type="submit" Name="Submit" >
+            <input type="submit" Name="Submit">
 
         </div>
         </form>
